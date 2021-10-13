@@ -1,0 +1,24 @@
+{
+  "name": "hashtaggeneratorbackend",
+  "version": "1.0.0",
+  "description": "a hashtag generator that converts captions into numerous hashtags",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dickson anyaele",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "@types/natural": "^5.1.0",
+    "@types/node": "^16.10.5",
+    "express": "^4.17.1",
+    "natural": "^5.1.1",
+    "thesaurus": "^0.0.1",
+    "thesaurus-synonyms": "^2.1.3",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  }
+}
