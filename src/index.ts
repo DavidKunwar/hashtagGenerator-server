@@ -1,11 +1,16 @@
 import express, { Request, Response } from 'express'
 import { HashTagGenerator } from './HashTagGenrerator';
+import cors from 'cors'
+
 
 const app = express();
 app.use(express.urlencoded())
 app.use(express.json())
+app.use(cors({ origin: "*", methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']}));
 
-const PORT = process.env.PORT || 8000;
+
+
+const PORT = process.env.PORT || 3001;
 
 app.get('/', (req: Request, res: Response) =>  { res.json({ hashtagtypes: ['hastag']})} );
 
@@ -22,7 +27,7 @@ app.get('/hashtaggenerator', (req: Request, res: Response) =>  {
 
     }
     catch(e){
-        return res.status(400).send('error')
+        return res.status(400).send(e)
     }
     
 });
