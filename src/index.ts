@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 app.get('/', (req: Request, res: Response) =>  { res.json({ hashtagtypes: ['hastag']})} );
 
 //Route for the hashtag generator
-app.get('/hashtaggenerator', (req: Request, res: Response) =>  { 
+app.post('/hashtaggenerator', (req: Request, res: Response) =>  { 
     
     try {
         const caption = req.body.caption

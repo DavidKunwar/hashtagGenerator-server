@@ -13,7 +13,7 @@ app.use((0, cors_1.default)({ origin: "*", methods: ['GET', 'POST', 'DELETE', 'U
 var PORT = process.env.PORT || 3001;
 app.get('/', function (req, res) { res.json({ hashtagtypes: ['hastag'] }); });
 //Route for the hashtag generator
-app.get('/hashtaggenerator', function (req, res) {
+app.post('/hashtaggenerator', function (req, res) {
     try {
         var caption = req.body.caption;
         var Result = (0, HashTagGenrerator_1.HashTagGenerator)(caption);
